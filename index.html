@@ -3,14 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <title>Wartung – schaefli.org</title>
+  <meta http-equiv="refresh" content="15;url=https://schaefli.org">
   <style>
     body { font-family: sans-serif; text-align: center; padding: 4em; background-color: #f7f7f7; }
     h1 { font-size: 2em; color: #333; }
     p  { font-size: 1.2em; color: #666; }
+    .footer { margin-top: 3em; font-size: 0.9em; color: #aaa; }
+    a { color: #0053a0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById("datetime").innerText = now.toLocaleString("de-CH");
+    }
+    window.onload = updateDateTime;
+  </script>
 </head>
 <body>
-  <h1>Diese Website ist aktuell nicht erreichbar</h1>
+  <h1>Unsere Website ist aktuell nicht erreichbar</h1>
   <p>Bitte versuchen Sie es später erneut.<br>Vielen Dank für Ihr Verständnis.</p>
+  <p>
+    📧 <a href="mailto:nicola@schaefli.org">E-Mail senden</a><br>
+    📱 <a href="https://t.me/niggi84">Telegram: @niggi84</a>
+  </p>
+  <div class="footer">
+    ⏳ Letzte Aktualisierung: <span id="datetime">Lädt...</span><br>
+    🔁 Du wirst in 15 Sekunden zur Hauptseite weitergeleitet.
+  </div>
 </body>
 </html>
